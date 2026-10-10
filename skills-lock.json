@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "skills": {
+    "expo-app-assets": {
+      "source": "TechWithEmmaYT/TechwithEmma-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/expo-app-assets/SKILL.md",
+      "computedHash": "0a9ffce862cbb6c6724f8a05b9a2c9a0ed8553f9bcdc89a66b0e5adc737063e7"
+    },
+    "expo-better-auth": {
+      "source": "TechWithEmmaYT/TechwithEmma-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/expo-better-auth/SKILL.md",
+      "computedHash": "370e1a872b9cbdb3aa27fb87ed0a3af16d604fbd42688f297180d9a15d21eba8"
+    },
+    "expo-native-builder": {
+      "source": "TechWithEmmaYT/TechwithEmma-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/expo-native-builder/SKILL.md",
+      "computedHash": "3a6a1c4b586d3c6f3469b776c281d4bc6d289b5e4c52289617eb5b1321c73173"
+    },
+    "expo-uniwind-theme": {
+      "source": "TechWithEmmaYT/TechwithEmma-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/expo-uniwind-theme/SKILL.md",
+      "computedHash": "67a445b2e8d27560a235d179fe00eed99167dadf17ec1c20a5cf3d702aecd768"
+    },
+    "mobile-ui-design": {
+      "source": "TechWithEmmaYT/TechwithEmma-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/mobile-ui-design/SKILL.md",
+      "computedHash": "1c4e4ec7de05b91648922d8718583640e8982bb4247c37849c441b16c5adedaa"
+    },
+    "plan-project": {
+      "source": "TechWithEmmaYT/TechwithEmma-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/plan-project/SKILL.md",
+      "computedHash": "43249ce110dd57bb15325c504b98f7ce58f54ce5b37414f3e86a70e959b38d1b"
+    }
+  }
+}
