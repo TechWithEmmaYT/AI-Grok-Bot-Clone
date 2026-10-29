@@ -1,9 +1,122 @@
-:root {
-  --font-display:
-    Spline Sans, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
-  --font-mono:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
-  --font-serif: Georgia, 'Times New Roman', serif;
+@import "tailwindcss";
+@import "uniwind";
+
+/*
+ * Dot design tokens.
+ * Colour values are sampled from the reference designs in _designs/ —
+ * see docs/design/mobile-design.md before changing any of them.
+ *
+ * The eight Dot identity colours are NOT here on purpose: they are artwork,
+ * not chrome, and live in src/components/dots/dotLooks.ts as the single source.
+ */
+
+/*
+ * Non-themed tokens belong in @theme, which both defines the variable and
+ * registers a utility namespace (rounded-card, font-display, ...). Declaring
+ * them under `:root` only creates the custom property — no utility is
+ * generated and the class silently does nothing at runtime.
+ */
+@theme {
+  /* 4pt rhythm: p-5 = 20px screen gutter, p-4 = 16px card padding */
+  --spacing: 4px;
+
+  --radius-card: 16px;
+  --radius-control: 14px;
+  --radius-tile: 12px;
+  --radius-pill: 28px;
+
+  --font-sans: "Inter_400Regular";
+  --font-medium: "Inter_500Medium";
+  --font-semibold: "Inter_600SemiBold";
+  --font-bold: "Inter_700Bold";
+  --font-display: "Inter_800ExtraBold";
 }
+
+/*
+ * Themed colours. Uniwind requires every theme to declare an identical set of
+ * variables — a token in one @variant and missing from the other is a hard
+ * runtime error, not a warning.
+ */
+@layer theme {
+  :root {
+    @variant light {
+      --color-background: #ffffff;
+      --color-foreground: #111111;
+
+      --color-card: #ffffff;
+      --color-card-foreground: #111111;
+
+      --color-muted: #f5f7fb;
+      --color-muted-foreground: #78809b;
+
+      --color-border: #e8edf5;
+      --color-input: #f5f7fb;
+
+      --color-primary: #0268fe;
+      --color-primary-foreground: #ffffff;
+
+      /* primary-tint: active pills, "Create a new Dot" */
+      --color-secondary: #e1eaff;
+      --color-secondary-foreground: #0268fe;
+
+      --color-success: #00c755;
+      --color-success-foreground: #ffffff;
+      --color-success-muted: #def8ec;
+
+      /* attention is reserved for approvals — nothing else */
+      --color-warning: #fe7b0f;
+      --color-warning-foreground: #ffffff;
+      --color-warning-muted: #fff2e6;
+
+      --color-destructive: #ff3b30;
+      --color-destructive-foreground: #ffffff;
+      --color-destructive-muted: #ffe9e7;
+
+      --color-accent: #0268fe;
+      --color-accent-foreground: #ffffff;
+
+      /* embedded browser / desktop surfaces */
+      --color-canvas: #070a18;
+      --color-canvas-foreground: #f4f6fa;
+    }
+
+    @variant dark {
+      --color-background: #0c0e14;
+      --color-foreground: #f4f6fa;
+
+      --color-card: #161922;
+      --color-card-foreground: #f4f6fa;
+
+      --color-muted: #161922;
+      --color-muted-foreground: #9aa3ba;
+
+      --color-border: #242836;
+      --color-input: #1b1f2a;
+
+      --color-primary: #0268fe;
+      --color-primary-foreground: #ffffff;
+
+      --color-secondary: #16213c;
+      --color-secondary-foreground: #7fb0ff;
+
+      --color-success: #00c755;
+      --color-success-foreground: #04240f;
+      --color-success-muted: #10281d;
+
+      --color-warning: #fe7b0f;
+      --color-warning-foreground: #2a1403;
+      --color-warning-muted: #2a1c0e;
+
+      --color-destructive: #ff5c52;
+      --color-destructive-foreground: #2a0a08;
+      --color-destructive-muted: #2d1210;
+
+      --color-accent: #0268fe;
+      --color-accent-foreground: #ffffff;
+
+      --color-canvas: #070a18;
+      --color-canvas-foreground: #f4f6fa;
+    }
+  }
+}
+
